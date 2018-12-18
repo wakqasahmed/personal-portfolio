@@ -11,10 +11,13 @@ const Hero = styled.header`
 `;
 
 const HeroInner = styled(Wrapper)`
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
   h1 {
     margin-bottom: 2rem;
+  }
+  h2 {
+    margin-bottom: 1.5rem;
   }
   @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-top: 10rem;
@@ -27,6 +30,16 @@ const HeroInner = styled(Wrapper)`
   @media (max-width: ${props => props.theme.breakpoints.s}) {
     padding-top: 6rem;
     padding-bottom: 6rem;
+  }
+`;
+
+const HeroImage = styled.div`
+  text-align: center;
+  margin-bottom: 2rem;
+  img {
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
   }
 `;
 
@@ -91,19 +104,29 @@ const ProjectListing = styled.ul`
   }
 `;
 
+const WorkListing = styled.ul`
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 4rem;
+  li {
+    margin-bottom: 1.45rem;
+  }
+`;
+
 class Index extends Component {
   render() {
     const {
-      data: { homepage, social, posts, projects },
+      data: { homepage, social, works, posts, projects },
     } = this.props;
     return (
       <Layout>
         <Hero>
           <HeroInner>
-            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-              <img style={{ borderRadius: '50%', width: '15rem', height: '15rem' }} src='https://avatars1.githubusercontent.com/u/4486133?s=460&v=4' />
-            </div>
+            <HeroImage>
+              <img src='https://avatars1.githubusercontent.com/u/4486133?s=460&v=4' />
+            </HeroImage>
             <h1>{homepage.data.title.text}</h1>
+            <h2>{homepage.data.subtitle.text}</h2>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
               {social.edges.map(s => (
@@ -115,6 +138,14 @@ class Index extends Component {
           </HeroInner>
         </Hero>
         <Wrapper style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <Title style={{ marginTop: '8rem' }}>Experience</Title>
+          <WorkListing>
+            {works.edges.map(work => (
+              <li key={work.node.data.title.text}>
+                {work.node.data.title.text}
+              </li>
+            ))}
+          </WorkListing>
           <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
           <Listing posts={posts.edges} />
           <Title style={{ marginTop: '8rem' }}>Recent projects</Title>
@@ -144,6 +175,9 @@ export const pageQuery = graphql`
     homepage: prismicHomepage {
       data {
         title {
+          text
+        }
+        subtitle {
           text
         }
         content {
@@ -183,6 +217,25 @@ export const pageQuery = graphql`
                 }
               }
             }
+          }
+        }
+      }
+    }
+    works: allPrismicWork(sort: { fields: [data___fromdate], order: DESC }) {
+      edges {
+        node {
+          data {
+            title {
+              text
+            }
+            company {
+              text
+            }
+            location {
+              text
+            }
+            fromdate(formatString: "DD.MM.YYYY")
+            todate(formatString: "DD.MM.YYYY")
           }
         }
       }
