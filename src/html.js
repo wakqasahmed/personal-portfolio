@@ -12,8 +12,8 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
-          <link rel="stylesheet" href="http://static.fontawesome.com/css/fontawesome-app.css" />
-          <link rel="stylesheet" href="http://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+          <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css" />
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
 
           {this.props.headComponents}
         </head>
