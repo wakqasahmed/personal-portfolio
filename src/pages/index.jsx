@@ -110,6 +110,17 @@ const WorkListing = styled.ul`
   margin-top: 4rem;
   li {
     margin-bottom: 1.45rem;
+    &:before {
+      content: "\f6d1";
+      font-family: "Font Awesome 5 Free";
+      display: inline-block;
+      margin-left: -1.4em;
+      width: 1.4em;
+      font-weight: 900;
+      color: #e5e5e5;
+      font-size: 3em;
+      position: absolute;
+    }
   }
 `;
 
