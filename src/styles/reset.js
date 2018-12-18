@@ -13,6 +13,9 @@ const reset = css`
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
+  [tabindex='-1'] {
+    background-color: #f9f9f9;
+  }  
   [tabindex='-1']:focus {
     outline: none !important;
   }

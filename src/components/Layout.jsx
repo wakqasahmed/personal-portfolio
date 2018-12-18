@@ -22,6 +22,11 @@ injectGlobal`
   body {
     color: ${theme.colors.greyDarker};
     background-color: ${theme.colors.bg};
+    background: url(https://i.ibb.co/VjBjDLV/BCgraphicelement-3.png);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    opacity: 0.97;    
   }
   ::selection {
     color: ${theme.colors.bg};

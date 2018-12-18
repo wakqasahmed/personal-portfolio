@@ -1,22 +1,14 @@
-# Gatsby Starter: Prismic
+# Gatsby Personal Portfolio Site using Prismic
 
-A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS [Prismic](https://prismic.io/).
+A typography-heavy & light-themed Gatsby Personal Portfolio which uses the Headless CMS [Prismic](https://prismic.io/).
 
-[Demo Website](https://gatsby-starter-prismic.netlify.com/)
+[Demo Website](https://wakqasahmed.netlify.com/)
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-prismic)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wakqasahmed/personal-portfolio)
 
 ## About Me
 
 I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights). Every pledge on Patreon helps me creating more free starters!
-
-Also check out the other _gatsby-starters_:
-
-- [gatsby-starter-portfolio-emma](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
-- [gatsby-starter-portfolio-emilia](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)
-- [gatsby-starter-portfolio-bella](https://github.com/LekoArts/gatsby-starter-portfolio-bella)
-- [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
-- [gatsby-starter-minimal-blog](https://github.com/LekoArts/gatsby-starter-minimal-blog)
 
 Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
 
@@ -127,6 +119,8 @@ Follow the second and third step (with the respective file from `.prismic`) for 
 | Hero Links | hero_links | Single     |
 | Homepage   | homepage   | Single     |
 | Projects   | projects   | Single     |
+| Work       | work       | Single     |
+| Education  | education  | Single     |
 
 These are the exact same custom types I used for this starter.
 

@@ -142,7 +142,9 @@ class Index extends Component {
           <WorkListing>
             {works.edges.map(work => (
               <li key={work.node.data.title.text}>
-                {work.node.data.title.text}
+                {work.node.data.fromdate} - {new Date(parseInt(work.node.data.todate.substring(6,10)),parseInt(work.node.data.todate.substring(3,5))-1,parseInt(work.node.data.todate.substring(0,2))) > new Date() ? 'Present' : work.node.data.todate}
+                <h3>{work.node.data.title.text} - <em>{work.node.data.company.text}</em></h3>
+                {work.node.data.location.text}
               </li>
             ))}
           </WorkListing>
