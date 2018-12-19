@@ -134,7 +134,7 @@ class Index extends Component {
         <Hero>
           <HeroInner>
             <HeroImage>
-              <img src='https://avatars1.githubusercontent.com/u/4486133?s=460&v=4' />
+              <img src='./images/profile_picture_wakqas_ahmed.jpeg' />
             </HeroImage>
             <h1>{homepage.data.title.text}</h1>
             <h2>Full Stack&nbsp; 
