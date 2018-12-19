@@ -137,7 +137,12 @@ class Index extends Component {
               <img src='https://avatars1.githubusercontent.com/u/4486133?s=460&v=4' />
             </HeroImage>
             <h1>{homepage.data.title.text}</h1>
-            <h2>{homepage.data.subtitle.text}</h2>
+            <h2>Full Stack&nbsp; 
+            <div className="box">
+              <div className="icon"><i className="fas fa-dice-d6"></i> <i className="fas fa-link"></i> <i className="fas fa-dice-d6"></i>  <i className="fas fa-link"></i> <i className="fas fa-dice-d6"></i></div>
+              <div className="details"><h2>Blockchain</h2></div>
+            </div> Developer            
+            </h2>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
               {social.edges.map(s => (

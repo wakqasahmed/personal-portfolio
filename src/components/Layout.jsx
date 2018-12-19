@@ -8,7 +8,7 @@ import { ThemeProvider } from 'emotion-theming';
 import 'typeface-lora';
 import 'typeface-source-sans-pro';
 import { Footer, SEO } from 'components';
-import { theme, reset } from 'styles';
+import { theme, reset, custom } from 'styles';
 
 injectGlobal`
   ${reset}
@@ -67,6 +67,7 @@ injectGlobal`
       font-size: 0.563rem !important;
     }
   }
+  ${custom}
 `;
 
 const PureLayout = ({ children, data }) => (
