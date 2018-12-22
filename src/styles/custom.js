@@ -8,7 +8,8 @@ const custom = css`
         box-sizing: border-box;
         text-align: center;
         margin: 0 0;
-        background: #e9e9e9;
+        /*background: #e9e9e9;*/
+        background: #9B3DDE;
         display: inline-block;
         box-shadow: 6px 6px 3px 0px rgba(122,117,122,0.15);
 
@@ -22,7 +23,8 @@ const custom = css`
             .fas {
                 font-size: 1em;
                 line-height: 2em;
-                color: #999;
+                /*color: #999;*/
+                color: #F5F2F4;
             }
             
             .fa-link {
@@ -36,7 +38,8 @@ const custom = css`
             left: 0;
             width: 100%;
             height: 100%;
-            background: #d6d6d6;
+            /*background: #d6d6d6;*/
+            background: #7341E4;
             transition: 0.5s;
             transform-origin: bottom;
             transform: translateY(-2em) rotateX(90deg);

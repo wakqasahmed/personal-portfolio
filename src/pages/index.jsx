@@ -5,7 +5,7 @@ import { graphql } from 'gatsby';
 import { Layout, Listing, Wrapper, Title } from 'components';
 
 const Hero = styled.header`
-  background-color: ${props => props.theme.colors.greyLight};
+  background-color: ${props => props.theme.colors.greyLighter};
   display: flex;
   align-items: center;
 `;
@@ -15,9 +15,11 @@ const HeroInner = styled(Wrapper)`
   padding-bottom: 3rem;
   h1 {
     margin-bottom: 2rem;
+    color: ${props => props.theme.colors.heading1Top};
   }
   h2 {
     margin-bottom: 1.5rem;
+    color: ${props => props.theme.colors.heading2Top};
   }
   @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-top: 10rem;
@@ -47,6 +49,7 @@ const HeroText = styled.div`
   font-size: 1.7rem;
   line-height: 1.4;
   margin-bottom: 2rem;
+  color: ${props => props.theme.colors.heading1Top};
   @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 1.4rem;
   }
@@ -72,12 +75,12 @@ const Social = styled.ul`
     }
     a {
       font-style: normal;
-      color: ${props => props.theme.colors.greyDark};
+      color: ${props => props.theme.colors.greyLight};
       font-size: 1.333rem;
       font-weight: 600;
       &:hover,
       &:focus {
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.headerLinkHover};
         text-decoration: none;
       }
       @media (max-width: ${props => props.theme.breakpoints.s}) {

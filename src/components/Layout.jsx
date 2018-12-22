@@ -26,7 +26,7 @@ injectGlobal`
     background-size: contain;
     background-position: center center;
     background-attachment: fixed;
-    opacity: 0.97;    
+    opacity: 0.95;    
   }
   ::selection {
     color: ${theme.colors.bg};
