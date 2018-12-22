@@ -120,7 +120,7 @@ const WorkListing = styled.ul`
       margin-left: -1.4em;
       width: 1.4em;
       font-weight: 900;
-      color: #e5e5e5;
+      color: ${props => props.theme.colors.grey};
       font-size: 3em;
       position: absolute;
     }

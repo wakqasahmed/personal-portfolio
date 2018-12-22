@@ -16,9 +16,12 @@ const custom = css`
         .icon {
             width: 100%;
             height: 100%;
+            
             transition: 0.5s;
             transform-origin: top;
             transform: translateY(0) rotateX(0deg);
+
+            /*animation: rotateicon 2s infinite linear;*/
 
             .fas {
                 font-size: 1em;
@@ -40,9 +43,17 @@ const custom = css`
             height: 100%;
             /*background: #d6d6d6;*/
             background: #7341E4;
+
             transition: 0.5s;
             transform-origin: bottom;
             transform: translateY(-2em) rotateX(90deg);
+
+            /*animation: rotatedetail 2s infinite linear;*/
+
+            h2{
+                line-height: 2em;
+            }
+
         }  
 
         &:hover, &:focus {
@@ -52,13 +63,27 @@ const custom = css`
 
             .details {
                 transform: translateY(0) rotateX(0deg);
-
-                h2 {
-                    line-height: 2em;
-                }            
             }        
-        }  
+        }
     }
+
+    @keyframes rotateicon {
+        50% {
+            transform: translateY(0px) rotateX(0deg);
+        }
+        100% {
+            transform: translateY(100%) rotateX(90deg); 
+        }        
+    }    
+
+    @keyframes rotatedetail {
+        50% {
+            transform: translateY(-2em) rotateX(90deg);
+        }
+        100% {
+            transform: translateY(0) rotateX(0deg);
+        }        
+    }     
 `;
 
 export default custom;
