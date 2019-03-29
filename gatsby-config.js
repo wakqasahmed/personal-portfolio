@@ -136,5 +136,13 @@ module.exports = {
     // Must be placed at the end
     'gatsby-plugin-offline',
     'gatsby-plugin-netlify',
+    {
+      resolve: 'gatsby-source-goodreads',
+      options: {
+        developerKey: "1PeuWdGadOsDcW34EtFpw",
+        goodReadsUserId: "91428504",
+        userShelf: "year-2019" //optional
+      }
+    }    
   ],
 };

@@ -127,10 +127,30 @@ const WorkListing = styled.ul`
   }
 `;
 
+const BookListing = styled.ul`
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 4rem;
+  li {
+    margin-bottom: 1.45rem;
+    &:before {
+      content: "\f02d";
+      font-family: "Font Awesome 5 Free";
+      display: inline-block;
+      margin-left: -1.4em;
+      width: 1.4em;
+      font-weight: 900;
+      color: ${props => props.theme.colors.grey};
+      font-size: 3em;
+      position: absolute;
+    }
+  }
+`;
+
 class Index extends Component {
   render() {
     const {
-      data: { homepage, social, works, posts, projects },
+      data: { homepage, social, works, books, posts, projects },
     } = this.props;
     return (
       <Layout>
@@ -167,6 +187,32 @@ class Index extends Component {
               </li>
             ))}
           </WorkListing>
+
+          <Title style={{ marginTop: '8rem' }}>Books</Title>
+          <BookListing>
+            {books.edges.map(collection => (
+              <li key={collection.node.id}>
+                {collection.node.shelfName}
+
+                {collection.node.reviews.map(review => (
+                  <h3><i class="fas fa-book"></i> {review.book.title}</h3>
+                ))}
+
+              </li>
+            ))}
+          </BookListing>
+          <BookListing>
+            {books.edges.map(collection => (
+              <li key={collection.node.id}>
+                {collection.node.shelfName}
+
+                {collection.node.reviews.map(review => (
+                  <h3><i class="fas fa-book-open"></i> {review.book.title}</h3>
+                ))}
+              </li>
+            ))}
+          </BookListing>
+
           <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
           <Listing posts={posts.edges} />
           <Title style={{ marginTop: '8rem' }}>Recent projects</Title>
@@ -261,6 +307,34 @@ export const pageQuery = graphql`
         }
       }
     }
+
+    books: allGoodreadsShelf {
+      edges {
+        node {
+          id
+          shelfName
+          reviews {
+            reviewID
+            rating
+            votes
+            spoilerFlag
+            spoilersState
+            dateAdded
+            dateUpdated
+            book {
+              bookID
+              textReviewsCount
+              isbn
+              isbn13
+              uri
+              title
+              titleWithoutSeries
+            }
+          }
+        }
+      }
+    }
+
     projects: allPrismicProjectsBodyLinkItem {
       edges {
         node {
