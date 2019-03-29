@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: wakqasahmed.com
+Token: 9284d39083ce73112f8ff7f88137d902316babf106356e201be62f30a6b164fc
