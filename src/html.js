@@ -14,7 +14,12 @@ export default class HTML extends React.Component {
           />
           <link rel="stylesheet" href="https://static.fontawesome.com/css/fontawesome-app.css" />
           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
-
+          <script>
+            window.prismic = {
+              endpoint: 'https://wakqasahmed.cdn.prismic.io/api/v2'
+            };
+          </script>
+          <script type="text/javascript" src="https://static.cdn.prismic.io/prismic.min.js"></script>
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
